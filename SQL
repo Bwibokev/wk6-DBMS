@@ -1,0 +1,21 @@
+SELECT 
+    firstName, lastName, email, officeCode
+FROM
+    employees
+        INNER JOIN
+    offices USING (officeCode);
+
+SELECT 
+    productName, productVendor, productLine
+FROM
+    products
+        LEFT JOIN
+    productlines USING (productLine);
+
+SELECT 
+    orderDate, shippedDate, status, customerNumber
+FROM
+    customers
+        RIGHT JOIN
+    orders USING (customerNumber)
+LIMIT 10;
